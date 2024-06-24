@@ -15,8 +15,13 @@ addGuestButton.addEventListener("click", function () {
     const guest = guestInput.value;
     // console.log(guest);
     if (guest !== "") {
-        let listItem = document.createElement("li");
+        const listItem = document.createElement("li");
         listItem.innerText = guest;
         guestList.append(listItem)
+        clearInput()
     }
 });
+
+const clearInput = function() {
+    guestInput.value = "";
+}
